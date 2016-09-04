@@ -33,7 +33,7 @@ export default class GoogleLogin extends React.Component{
     gapi.load('auth2', function() {
       var auth2 = gapi.auth2.init({
         client_id: socialId,
-        fetch_basic_profile: false,
+        fetch_basic_profile: true,
         scope: scope
       });
       auth2.signIn().then(function(googleUser) {
